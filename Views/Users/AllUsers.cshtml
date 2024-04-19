@@ -1,0 +1,18 @@
+﻿@model List<User>
+
+
+@{
+    ViewData["Title"] = "All Users";
+}
+
+<h1>Here's all the Users this app is using:</h1>
+
+@foreach(var obj in Model){
+    <div style="border: solid black">
+
+        <div>ID -@obj.BaseId</div>
+        <div>USERNAME -@obj.BaseUsername</div>
+        <div>AGE -@obj.Age</div>
+
+    </div>
+}

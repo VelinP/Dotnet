@@ -1,11 +1,16 @@
 ﻿
+@model List<User>
+
 @{
     ViewData["Title"] = "PeshoHtml";
+    
 }
+
+
 
 <div className="submitdiv">
     <div className="submitholderdiv">
-        <h1>Login</h1>
+        <h1>Model[0].Age</h1>
 
         <form id="create">
             <input name="username" id="description" placeholder="username"></input>
@@ -14,5 +19,11 @@
             <button>Submit</button>
         </form>
     </div>
+
+
+    @foreach (var obj in Model)
+    {
+        <div>@obj.Age</div>
+    }
 
 </div>
