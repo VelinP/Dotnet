@@ -7,12 +7,20 @@
 
 <h1>Here's all the Users this app is using:</h1>
 
-@foreach(var obj in Model){
-    <div style="border: solid black">
-
-        <div>ID -@obj.BaseId</div>
-        <div>USERNAME -@obj.BaseUsername</div>
-        <div>AGE -@obj.Age</div>
-
-    </div>
+@foreach (var obj in Model)
+{
+    <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            Username :
+            <span class="badge bg-primary rounded-pill">@obj.BaseUsername</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            ID :
+            <span class="badge bg-primary rounded-pill">@obj.BaseId</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            Age :
+            <span class="badge bg-primary rounded-pill">@obj.Age</span>
+        </li>
+    </ul>
 }
